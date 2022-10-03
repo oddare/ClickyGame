@@ -1,7 +1,7 @@
 let resource = 0;
 let productionAmount = 0;
 
-let berryGatherer = {
+/*let berryGatherer = {
     name: "berryGatherer",
     amount: 0,
     cost: 10,
@@ -17,7 +17,7 @@ let berryGathererMk2 = {
     costIncrease: 1.3,
     production: 0,
     productionIncrease: 4
-};
+};*/
 
 const manualGather = document.getElementById('gatherButton');
 const buildBerryGatherer = document.getElementById('buildBerryGatherer');

@@ -1,6 +1,3 @@
-//let berryGatherer = [['berryGathererAmount', 0],['berryGathererCost', 10, 1.2],['berryGathererProduction', 0, 2]];
-let berryGathererMk2 = [['berryGathererMk2Amount', 0],['berryGathererMk2Cost', 10, 1.3],['berryGathererMk2Production', 0, 4]];
-
 let berryGatherer = {
     name: "berryGatherer",
     amount: 0,
@@ -9,3 +6,16 @@ let berryGatherer = {
     production: 0,
     productionIncrease: 2
 };
+
+//module.exports = {berryGatherer};
+
+let berryGathererMk2 = {
+    name: "berryGathererMk2",
+    amount: 0,
+    cost: 20,
+    costIncrease: 1.3,
+    production: 0,
+    productionIncrease: 4
+};
+
+//module.exports = {berryGathererMk2};
