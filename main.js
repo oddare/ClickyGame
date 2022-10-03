@@ -1,10 +1,27 @@
 let resource = 0;
 let productionAmount = 0;
-let berryGatherer = [['berryGathererAmount', 0],['berryGathererCost', 10, 1.2],['berryGathererProduction', 0, 2]];
-let berryGathererMk2 = [['berryGathererMk2Amount', 0],['berryGathererMk2Cost', 10, 1.3],['berryGathererMk2Production', 0, 4]];
+
+let berryGatherer = {
+    name: "berryGatherer",
+    amount: 0,
+    cost: 10,
+    costIncrease: 1.2,
+    production: 0,
+    productionIncrease: 2
+};
+
+let berryGathererMk2 = {
+    name: "berryGathererMk2",
+    amount: 0,
+    cost: 20,
+    costIncrease: 1.3,
+    production: 0,
+    productionIncrease: 4
+};
 
 const manualGather = document.getElementById('gatherButton');
 const buildBerryGatherer = document.getElementById('buildBerryGatherer');
+const buildBerryGathererMk2 = document.getElementById('buildBerryGathererMk2');
 
 setInterval(test, 1000);
 
@@ -25,12 +42,12 @@ buildBerryGathererMk2.addEventListener('click', function() {
 })
 
 function buildFunction(building) {
-    if (resource >= building[1][1]) {
-        resourceUpdater(-building[1][1]);
+    if (resource >= building.cost) {
+        resourceUpdater(-building.cost);
         buildAmountUpdater(building);
         costUpdater(building);
         productionUpdater(building);
-        increaseProductionAmount(building[2][2]);
+        increaseProductionAmount(building.productionIncrease);
     }
 }
 
@@ -45,16 +62,16 @@ function resourceUpdater(change) {
 }
 
 function costUpdater(cost) {
-    cost[1][1] = Math.round(cost[1][1] * cost[1][2]); // Make a function to calculate costs based on increase-value; building[1][2]
-    document.getElementById(cost[1][0]).innerHTML = cost[1][1]
+    cost.cost = Math.round(cost.cost * cost.costIncrease); // Make a function to calculate costs based on increase-value; building[1][2]
+    document.getElementById(cost.name+"Cost").innerHTML = cost.cost
 }
 
 function productionUpdater(production) {
-    production[2][1] = production[2][1] + production[2][2]
-    document.getElementById(production[2][0]).innerHTML = production[2][1]
+    production.production = production.production + production.productionIncrease
+    document.getElementById(production.name+"Production").innerHTML = production.production
 }
 
 function buildAmountUpdater(building) {
-    building[0][1]++;
-    document.getElementById(building[0][0]).innerHTML = building[0][1];
+    building.amount++;
+    document.getElementById(building.name+"Amount").innerHTML = building.amount;
 }
