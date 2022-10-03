@@ -1,0 +1,75 @@
+<!--
+    2022-10-03 Starter-test for... i guess a game?
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>ClickyGame</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Odd">
+        <link href="stylesheet.css" rel="stylesheet">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Clicky Game
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <button id="gatherButton" type="button">
+                            Farm berry
+                        </button>
+                    </td>
+                    <td>
+                        <p>
+                            PPS: <a id="productionPerSecond">0</a>
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            Resources: <a id="resourceValue">0</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="buildBerryGatherer" type="button">
+                            Build Berry Gatherer
+                            <div>Costs: <a id="berryGathererCost">10</a></div>
+                        </button>
+                    </td>
+                    <td>
+                        <p>Amount: <a id="berryGathererAmount">0</a></p>
+                    </td>
+                    <td>
+                        <p>Producing <a id="berryGathererProduction">0</a>/s</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="buildBerryGathererMk2" type="button">
+                            Build Berry Gatherer Mk2
+                            <div>Costs: <a id="berryGathererMk2Cost">10</a></div>
+                        </button>
+                    </td>
+                    <td>
+                        <p>Amount: <a id="berryGathererMk2Amount">0</a></p>
+                    </td>
+                    <td>
+                        <p>Producing <a id="berryGathererMk2Production">0</a>/s</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+    <footer>
+
+    </footer>
+</html>
