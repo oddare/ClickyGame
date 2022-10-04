@@ -4,9 +4,6 @@
 // Create a function for importing a save
 let savekey;
 
-const manualSave = document.getElementById('saveButton');
-const manualLoad = document.getElementById('loadButton');
-
 manualSave.addEventListener('click', function() {
     window.localStorage.setItem('saveKey', JSON.stringify(buildings));
 });
