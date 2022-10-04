@@ -8,10 +8,10 @@ const manualSave = document.getElementById('saveButton');
 const manualLoad = document.getElementById('loadButton');
 
 manualSave.addEventListener('click', function() {
-    window.localStorage.setItem('saveKey', JSON.stringify(berryGatherer));
+    window.localStorage.setItem('saveKey', JSON.stringify(buildings));
 });
 
 manualLoad.addEventListener('click', function() {
-    berryGatherer = JSON.parse(window.localStorage.getItem('saveKey'));
-    document.getElementById(berryGatherer.name+"Amount").innerHTML = berryGatherer.amount;
+    buildings = JSON.parse(window.localStorage.getItem('saveKey'));
+    document.getElementById(buildings.berryGatherer.name+"Amount").innerHTML = buildings.berryGatherer.amount;
 });
