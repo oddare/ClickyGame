@@ -51,3 +51,7 @@ function buildAmountUpdater(building) {
     building.amount++;
     document.getElementById(building.name+"Amount").innerHTML = building.amount;
 }
+
+function displayChange(Id, type, variable) {
+    document.getElementById(Id+type).innerHTML = variable;
+}

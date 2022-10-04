@@ -10,5 +10,6 @@ manualSave.addEventListener('click', function() {
 
 manualLoad.addEventListener('click', function() {
     buildings = JSON.parse(window.localStorage.getItem('saveKey'));
-    document.getElementById(buildings.berryGatherer.name+"Amount").innerHTML = buildings.berryGatherer.amount;
+    displayChange(buildings.berryGatherer.name, "Amount", buildings.berryGatherer.amount);
 });
+
