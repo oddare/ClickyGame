@@ -7,8 +7,6 @@ let berryGatherer = {
     productionIncrease: 2
 };
 
-//module.exports = {berryGatherer};
-
 let berryGathererMk2 = {
     name: "berryGathererMk2",
     amount: 0,
@@ -17,5 +15,3 @@ let berryGathererMk2 = {
     production: 0,
     productionIncrease: 4
 };
-
-//module.exports = {berryGathererMk2};

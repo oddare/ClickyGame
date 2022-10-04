@@ -35,11 +35,11 @@ manualGather.addEventListener('click', function() {
 
 buildBerryGatherer.addEventListener('click', function() {
     buildFunction(berryGatherer);
-})
+});
 
 buildBerryGathererMk2.addEventListener('click', function() {
     buildFunction(berryGathererMk2);
-})
+});
 
 function buildFunction(building) {
     if (resource >= building.cost) {
