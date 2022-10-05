@@ -2,7 +2,7 @@
 setInterval(test, 1000);
 
 function test() {
-    resourceUpdater(buildings.productionAmount);
+    resourceUpdater(game.productionAmount);
 }
 
 manualGather.addEventListener('click', function() {
@@ -10,15 +10,15 @@ manualGather.addEventListener('click', function() {
 });
 
 buildBerryGatherer.addEventListener('click', function() {
-    buildFunction(buildings.berryGatherer);
+    buildFunction(game.machines.berryGatherer);
 });
 
 buildBerryGathererMk2.addEventListener('click', function() {
-    buildFunction(buildings.berryGathererMk2);
+    buildFunction(game.machines.berryGathererMk2);
 });
 
 function buildFunction(building) {
-    if (buildings.resource >= building.cost) {
+    if (game.resource >= building.cost) {
         resourceUpdater(-building.cost);
         buildAmountUpdater(building);
         costUpdater(building);
@@ -28,13 +28,13 @@ function buildFunction(building) {
 }
 
 function increaseProductionAmount(value) {
-    buildings.productionAmount = Math.round(buildings.productionAmount + value);
-    document.getElementById('productionPerSecond').innerHTML = buildings.productionAmount
+    game.productionAmount = Math.round(game.productionAmount + value);
+    document.getElementById('productionPerSecond').innerHTML = game.productionAmount
 }
 
 function resourceUpdater(change) {
-    buildings.resource = buildings.resource + change;
-    document.getElementById("resourceValue").innerHTML = buildings.resource;
+    game.resource = game.resource + change;
+    document.getElementById("resourceValue").innerHTML = game.resource;
 }
 
 function costUpdater(cost) {
@@ -50,8 +50,4 @@ function productionUpdater(production) {
 function buildAmountUpdater(building) {
     building.amount++;
     document.getElementById(building.name+"Amount").innerHTML = building.amount;
-}
-
-function displayChange(Id, type, variable) {
-    document.getElementById(Id+type).innerHTML = variable;
 }
